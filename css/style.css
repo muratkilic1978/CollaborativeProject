@@ -176,18 +176,22 @@ input[type=text], select, textarea{
   }
 
 
-  input[type="submit"] {
-    width: 20.6rem;
+input[type="submit"] {
+    width: 75%;
     background-color: #005AFF;
 }
-
 .container.contact-form-container {
     width: 46%;
 }
 
 aside.container.contact-image-container {
     width: 46%;
-    height: 55%;
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
 }
 
 section#contact {
@@ -203,10 +207,39 @@ section.contact-form-elements {
     width: 100%;
 }
 
+
+/* Responsive layout - when the screen is less than 912px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 912px) {
+    section.contact-form-elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    aside.container.contact-form-container {
+        width: 75%;
+    }
+
+    aside.container.contact-image-container {
+        width: 75%;
+    }
+
+  }
+
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
     }
+
+    aside.container.contact-image-container img {
+        height: 80%;
+    }
   }
+
+
+
+
+
+
